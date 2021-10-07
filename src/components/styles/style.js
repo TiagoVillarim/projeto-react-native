@@ -1,4 +1,4 @@
-import React from "react";
+
 import { StyleSheet } from "react-native";
 
 
@@ -36,10 +36,13 @@ export const cards = StyleSheet.create({
     fontWeight: '700',
     marginTop: 20
   },
+  result: {
+    margin: 10,
+  },
   cardInput: {
     backgroundColor: '#F3F3F3',
     position: 'relative',
-    top: '18%',
+    top: '5%',
     margin: 20,
     padding: 10,
     width: '60%',
