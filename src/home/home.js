@@ -28,7 +28,7 @@ export default function Home(){
       setBotao('calcular novamente')
       return;
     }else{
-      setState('Você precisa escolher dois valores para calcular')
+      setState('Preencha os campos abaixo!')
       setSoma('');
       setBotao('calcular')
     }
