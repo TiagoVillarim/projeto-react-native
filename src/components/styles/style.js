@@ -51,7 +51,25 @@ export const cards = StyleSheet.create({
 
 export const button = StyleSheet.create({
   buttonContainer: {
+    backgroundColor: '#5EC8B5',
+    justifyContent: 'center',
     position: 'relative',
     top: 250,
+    width: '50%',
+    height: 45,
+    borderRadius: 20
   },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: '#fff',
+  }
+});
+
+export const list = StyleSheet.create({
+  listStyle: {
+
+  }
 });
