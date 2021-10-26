@@ -54,7 +54,7 @@ export const button = StyleSheet.create({
     backgroundColor: '#5EC8B5',
     justifyContent: 'center',
     position: 'relative',
-    top: '90%',
+    top: 300,
     width: '50%',
     height: 45,
     borderRadius: 20
@@ -68,8 +68,15 @@ export const button = StyleSheet.create({
   }
 });
 
-export const list = StyleSheet.create({
+export const lists = StyleSheet.create({
   listStyle: {
 
   }
 });
+
+export const error = StyleSheet.create({
+  errorText: {
+    color: 'red',
+    padding: 5,
+  }
+})

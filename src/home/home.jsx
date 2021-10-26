@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, View, FlatList, Text, TextInput, Button, StyleSheet, Pressable, Keyboard, TouchableOpacity } from "react-native";
-import { styles, cards, button, list} from '../components/styles/style';
+import { styles, cards, button, lists, error} from '../components/styles/style';
 import { useState } from "react";
 
 
@@ -12,6 +12,7 @@ export default function Home(){
   const [peso, setPeso] = useState(null);
   const [botao, setBotao] = useState('calcular');
   const [imcList, setImcList] = useState([]);
+  const [errorMSG, setErrorMSG] = useState('')
 
 
   function Soma(){
@@ -29,8 +30,10 @@ export default function Home(){
       setPeso(null);
       setState('Seu imc é de:');
       setBotao('calcular novamente')
+      setErrorMSG('')
       return;
     }else{
+      setErrorMSG('Campo obrigatório*')
       setState('Preencha os campos abaixo!')
       setSoma('');
       setBotao('calcular')
@@ -46,7 +49,9 @@ export default function Home(){
           <Text style={cards.cardTextTitle}>{state}</Text>
           <Text style={cards.result}>{soma}</Text>
           <TextInput style={cards.cardInput} keyboardType="numeric" value={altura} placeholder="altura: ex-1.75"  onChangeText={setAltura}/>
+            <Text style={error.errorText}>{errorMSG}</Text>
           <TextInput style={cards.cardInput} keyboardType="numeric" value={peso} placeholder="peso: ex-82.5kg"  onChangeText={setPeso}/>
+            <Text style={error.errorText}>{errorMSG}</Text>
       </View>
 
         <View style={button.buttonContainer}>
@@ -57,21 +62,20 @@ export default function Home(){
 
 
         {/* FlatList o problema que estava dando era em relação ao css, consertar depois e deixar organizado */}
-        <View>
+        {/* <View>
             <FlatList
+              style={lists.listStyle}
               data={imcList.reverse()}
               renderItem={({item}) => {
                 return(
                   <Text>Resultado imc: {item.imc}</Text>
                   )
                 }}
-                keyExtractor={(item) => {
-                  item.id
-                }}
+                keyExtractor={(item) => String(item.id)}
                 
                 >
             </FlatList>
-          </View>
+          </View> */}
 
 
       </View>
