@@ -55,17 +55,25 @@ export default function Home(){
           </TouchableOpacity>
         </View>
 
-  
-         {/* <FlatList style={list.listStyle} data={imcList.reverse()} renderItem={({item}) => {
-            return(
-              <Text >
-                Resultado do IMC é igual a = {item.imc};
-              </Text>
-            )
-          }} keyExtractor={(item) => {item.id}}>
 
-          </FlatList>
-        */}
+        {/* FlatList o problema que estava dando era em relação ao css, consertar depois e deixar organizado */}
+        <View>
+            <FlatList
+              data={imcList.reverse()}
+              renderItem={({item}) => {
+                return(
+                  <Text>Resultado imc: {item.imc}</Text>
+                  )
+                }}
+                keyExtractor={(item) => {
+                  item.id
+                }}
+                
+                >
+            </FlatList>
+          </View>
+
+
       </View>
         
 

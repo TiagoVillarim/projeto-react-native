@@ -54,7 +54,7 @@ export const button = StyleSheet.create({
     backgroundColor: '#5EC8B5',
     justifyContent: 'center',
     position: 'relative',
-    top: 250,
+    top: '90%',
     width: '50%',
     height: 45,
     borderRadius: 20
