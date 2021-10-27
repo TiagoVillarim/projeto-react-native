@@ -33,7 +33,8 @@ export const cards = StyleSheet.create({
   cardTextTitle: {
     fontSize: 20,
     fontWeight: '700',
-    marginTop: 20
+    marginTop: 20,
+    marginLeft: 18,
   },
   result: {
     margin: 10,
@@ -77,6 +78,8 @@ export const lists = StyleSheet.create({
 export const error = StyleSheet.create({
   errorText: {
     color: 'red',
-    padding: 5,
+    position: "relative",
+    top: 35,
+    right: 40,
   }
 })

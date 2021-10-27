@@ -34,7 +34,7 @@ export default function Home(){
       return;
     }else{
       setErrorMSG('Campo obrigatório*')
-      setState('Preencha os campos abaixo!')
+      setState('É necessário preencher os campos abaixo para calcular o IMC')
       setSoma('');
       setBotao('calcular')
     }
@@ -48,10 +48,10 @@ export default function Home(){
       <View style={cards.cardsBox}>
           <Text style={cards.cardTextTitle}>{state}</Text>
           <Text style={cards.result}>{soma}</Text>
-          <TextInput style={cards.cardInput} keyboardType="numeric" value={altura} placeholder="altura: ex-1.75"  onChangeText={setAltura}/>
             <Text style={error.errorText}>{errorMSG}</Text>
-          <TextInput style={cards.cardInput} keyboardType="numeric" value={peso} placeholder="peso: ex-82.5kg"  onChangeText={setPeso}/>
+              <TextInput style={cards.cardInput} keyboardType="numeric" value={altura} placeholder="altura: ex-1.75"  onChangeText={setAltura}/>
             <Text style={error.errorText}>{errorMSG}</Text>
+              <TextInput style={cards.cardInput} keyboardType="numeric" value={peso} placeholder="peso: ex-82.5kg"  onChangeText={setPeso}/>
       </View>
 
         <View style={button.buttonContainer}>
